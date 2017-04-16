@@ -12,27 +12,33 @@ Options:
   --page=<number>      Show tickets page.
 """
 
-from docopt import docopt
 import requests
+from docopt import docopt
+
+base_url = 'http://127.0.0.1:3000/tickets'
+
 
 def show(args):
     global res
-    if(args['--page']):
+    if args['--page']:
         print('Showing page # {0}'.format(args['--page']))
         param = {'page': '{0}'.format(args['--page'])}
-        res = requests.get('http://127.0.0.1:3000/tickets', param)
+        res = requests.get(base_url, param)
 
-    elif(args['<ticket>']):
+    elif args['<ticket>']:
         print('Showing ticket # {0}:'.format(args['<ticket>']))
-        res = requests.get('http://127.0.0.1:3000/ticket/{0}'.format(args['<ticket>']))
+        res = requests.get('http://127.0.0.1:3000/tickets/{0}'.format(args['<ticket>']))
     else:
         print('Showing page # 1')
-        res = requests.get('http://127.0.0.1:3000/tickets')
-    printResult()
+        res = requests.get(base_url)
+    print_result()
 
-def printResult ():
-    if (res.status_code == 200):print(res.json())
-    else: print(res)
+
+def print_result():
+    if res.status_code == 200:
+        print(res.json())
+    else:
+        print(res)
 
 
 # def auth():
