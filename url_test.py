@@ -3,7 +3,7 @@ import unittest
 from url import get_url
 
 
-class DefaultWidgetSizeTestCase(unittest.TestCase):
+class UrlCreationTestCase(unittest.TestCase):
     def test_get_url_no_param(self):
         arguments = {'--help': False, '--page': None, '<ticket>': None, 'show': True}
         self.assertEquals(get_url(arguments), 'http://127.0.0.1:3000/tickets')
