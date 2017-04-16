@@ -1,18 +1,35 @@
 # zndsk
-run a server 
-install dependencies listed in requirements.txt using your favourite tool (pip)
-run ./zndsk.py  to see the available commands and its paramenters
+
+install dependencies: 
+pip install -r requirements.txt
+
+run tests:
+python -m unittest url_test
+
+run a server:
+./zndsk.py 
+
 
 Usage:
+
+
   zndsk.py show [--page=<number>]
+
+
   zndsk.py show <ticket>
+
+
   zndsk.py (-h | --help)
   
- 
 Example usage:
 
-./zndsk.py show 
-./zndsk.py show 2
-./zndsk.py show --page=2
+
+  ./zndsk.py show
+
+
+  ./zndsk.py show 2
+
+
+  ./zndsk.py show --page=2
 
 
