@@ -3,7 +3,7 @@
 """Zendesk tickets viewer.
 
 Usage:
-  zndsk.py show [--page=<ticket>]
+  zndsk.py show [--page=<page>]
   zndsk.py show <ticket>
   zndsk.py (-h | --help)
 
@@ -19,7 +19,7 @@ from url import get_url
 
 
 def show(args):
-    print_result(requests.get(get_url(args)))
+    print_result(requests.get(*get_url(args)))
 
 
 def print_result(res):
