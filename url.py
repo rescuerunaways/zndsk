@@ -9,8 +9,8 @@ def get_url(ar):
 
     elif ar['<ticket>']:
         print('Showing ticket # {0}:'.format(ar['<ticket>']))
-        return '{0}/{1}'.format(base, ar['<ticket>'])
+        return ('{0}/{1}'.format(base, ar['<ticket>']),)
 
     else:
         print('Showing page # 1')
-        return base
+        return (base,)
