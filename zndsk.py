@@ -26,9 +26,3 @@ if __name__ == '__main__':
 if args['show']:
     show(args)
 
-
-# def auth():
-#         dmn = raw_input("domain:")
-#         usr = raw_input("username(email):")
-#         pswd = getpass.getpass('password:')
-#         return dmn, usr, pswd
