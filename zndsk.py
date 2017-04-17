@@ -12,19 +12,13 @@ Options:
   --page=<number>      Show tickets page.
 """
 
-import requests
 from docopt import docopt
 
-from url import get_url
+from controller import get
 
 
 def show(args):
-    print_result(requests.get(*get_url(args)))
-
-
-def print_result(res):
-        print(res.json())
-
+    print(get(args).text)
 
 if __name__ == '__main__':
     args = docopt(__doc__)
