@@ -7,9 +7,6 @@ run tests:
 python -m unittest url_test
 python -m unittest integration_test (performs real calls to pytickets, so it's should be running)
 
-or
-
-python -m unittest discover
 
 run a server:
 ./zndsk.py 
