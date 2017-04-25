@@ -2,7 +2,7 @@ from json import dumps
 
 import requests
 
-from url import get_url
+from src.url import get_url
 
 
 def get(args):

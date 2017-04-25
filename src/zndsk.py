@@ -14,7 +14,7 @@ Options:
 
 from docopt import docopt
 
-from controller import get
+from src.controller import get
 
 
 def show(args):

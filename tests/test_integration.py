@@ -1,6 +1,9 @@
 import unittest
 
-from controller import get
+from src.controller import get
+
+
+# eliminate repetition
 
 
 class UrlCreationTestCase(unittest.TestCase):
